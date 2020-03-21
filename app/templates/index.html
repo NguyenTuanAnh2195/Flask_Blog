@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block post_content %}
+    <h1>Hello, {{ render_response.user.username }}</h1>
+    {% for post in render_response.posts %}
+    <div><p>{{ post.author.username }} wrote: <i>{{ post.body }}</i></p></div>
+    {% endfor %}
+{% endblock %}
